@@ -12,7 +12,7 @@ int main(int argc, const char* argv[]) {
     int num;
     int c;
     
-    while (c = (fscanf(fp, "%d", &num)) != EOF) {
+    while ((c = fscanf(fp, "%d", &num)) != EOF) {
         if (c == 1) {
             sum += num;
         } else {
