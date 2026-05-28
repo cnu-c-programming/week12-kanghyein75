@@ -10,8 +10,10 @@ typedef struct config {
 } Config;
 
 void config_parser(Config* config_ptr) {
-    void config_parser(Config* config_ptr) {
     FILE* fp = fopen("config.txt", "r");
+    if (fp == NULL) {
+        return; 
+    }
 
     char buffer[1000]; 
 
