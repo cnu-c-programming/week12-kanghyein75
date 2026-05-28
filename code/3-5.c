@@ -8,9 +8,18 @@ int main(int argc, const char* argv[]) {
         return 0;
     }
 
-
     int sum = 0;
-
+    int num;
+    
+    while ((fscanf(fp, "%d", &num)) != EOF) {
+        if ((fscanf(fp, "%d", &num)) == 1) {
+            sum += num;
+        } else {
+            char fail[100];
+            fscant(fp, "%s", fail);
+            fprintf(stderr, "invalid input %s\n", fail);
+        }
+    }
 
     printf("sum: %d\n", sum);
     fclose(fp);
